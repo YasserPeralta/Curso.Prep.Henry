@@ -5,13 +5,8 @@ function obtenerMayor(x, y) {
   // Devuelve el número más grande
   // Si son iguales, devuelve cualquiera de los dos
   // Tu código:
-  if (x > y) {
-    return x;
-  } else {
-    return y;
-  }
-  }
-
+  return  Math.max(x,y)
+}
 
 function mayoriaDeEdad(edad) {
   //Determinar si la persona según su edad puede ingresar a un evento.
@@ -48,16 +43,40 @@ function saludo(idioma) {
   // Si "idioma" es "ingles", devuelve "Hello!"
   // Si "idioma" no es ninguno de los anteiores o es `undefined` devuelve "Hola!"
   // Tu código:
-  if(idioma=== 'aleman'){
-    return 'Guten Tag!';
-  }
-  else if (idioma=== 'mandarin'){
-    return 'Ni Hao!';
-  }
-  else if(idioma === 'ingles'){
-    return 'Hello!'
-  } else{
-    return 'Hola!'
+ // if(idioma=== 'aleman'){
+  //  return 'Guten Tag!';
+  //}
+  //else if (idioma=== 'mandarin'){
+    //return 'Ni Hao!';
+ // }
+ // else if(idioma === 'ingles'){
+  //  return 'Hello!'
+ // } else{
+  //  return 'Hola!'
+  //}
+
+  //opcion 2 (includes)
+  //var array=['aleman','mandarin','ingles']
+  //if (!array.includes(idioma)){
+   // return 'Hola!'
+  //} else if(idioma=== 'aleman'){
+  //   return 'Guten Tag!';
+  //} else if (idioma=== 'mandarin'){
+  //  return 'Ni Hao!';
+  //  } else if(idioma === 'ingles'){
+  //  return 'Hello!'
+  // }
+
+  //opcion 3 (switch)
+  switch(idioma){
+    case 'aleman':
+      return 'Guten Tag!';
+      case 'mandarin':
+        return 'Ni Hao!';
+        case 'ingles':
+          return 'Hello!'
+          default:
+            return 'Hola!'
   }
 }
 
@@ -130,13 +149,14 @@ function fizzBuzz(numero) {
   // Si "numero" es divisible entre 3 y 5 (ambos), devuelve "fizzbuzz"
   // De lo contrario, devuelve el numero
 if(numero%3 === 0 && numero%5 === 0){
-  return 'fizzbuzz'
+ return 'fizzbuzz'
 } else if(numero%3 === 0) {
-  return 'fizz'
+return 'fizz'
 } else if(numero%5 === 0){
   return 'buzz'
 } else
 return numero
+
 }
 
 function operadoresLogicos(num1, num2, num3) {
@@ -208,10 +228,18 @@ function tablaDelSeis(){
 function tieneTresDigitos(numero){
   //Leer un número entero y retornar true si tiene 3 dígitos. Caso contrario, retorna false.
   //Escribe tu código aquí
-  if(numero>99 && numero<1000){
-    return true
-  }
-  return false
+
+ // if(numero>99 && numero<1000){
+ //   return true
+ // }
+ // return false
+
+ //Opcion 2 numero to string
+ var string = numero.toString();
+ if(string.length === 3){
+   return true;
+ }
+return false;
 }
 
 function doWhile(numero) {

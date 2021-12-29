@@ -71,7 +71,9 @@ function tienenMismaLongitud(str1, str2) {
   // Devuelve "true" si las dos strings tienen la misma longitud
   // De lo contrario, devuelve "false"
   // Tu código:
-  return str1.length === str2.length;
+ if(str1.length === str2.length){
+   return true
+ } else {return false};
 }
 
 function menosQueNoventa(num) {
@@ -87,7 +89,10 @@ function mayorQueCincuenta(num) {
   // Devuelve "true" si el argumento de la función "num" es mayor que cincuenta
   // De lo contrario, devuelve "false"
   // Tu código:
-  return num > 50;
+  if (num > 50) {
+    return true
+  } else {
+    return false};
 }
 
 function obtenerResto(x, y) {
@@ -225,7 +230,7 @@ function deEuroAdolar(euro){
   //Supongamos que 1 euro equivale a 1.20 dólares. Escribe un programa que reciba
   //como parámetro un número de euros y calcule el cambio en dólares.
   //Escribe tu código aquí
-  var euros = euro * 1.2;
+  var euros = euro * 1.20;
   return euros;
 }
 
