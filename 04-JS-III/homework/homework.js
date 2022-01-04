@@ -3,21 +3,21 @@
 function devolverPrimerElemento(array) {
   // Devuelve el primer elemento de un array
   // Tu código:
-  return array[0]
+  return array[0];
 }
 
 
 function devolverUltimoElemento(array) {
   // Devuelve el último elemento de un array
   // Tu código:
-  return array[array.length - 1]
+  return array[array.length - 1];
 }
 
 
 function obtenerLargoDelArray(array) {
   // Devuelve el largo de un array
   // Tu código:
-  return array.length
+  return array.length;
 }
 
 
@@ -58,11 +58,15 @@ function dePalabrasAFrase(palabras) {
   // con espacios entre cada palabra
   // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'
   // Tu código:
-  var respuesta = palabras[0];
-  for(var i = 1; i < palabras.length; i++){
-    respuesta = respuesta + ' ' + palabras[i];
-   }
-   return respuesta;
+
+  // opcion 1. Con .join
+   return palabras.join(' ')
+
+  //var respuesta = palabras[0];
+  //for(var i = 1; i < palabras.length; i++){
+   // respuesta = respuesta + ' ' + palabras[i];
+   //}
+   //return respuesta;
 }
 
 
@@ -126,10 +130,16 @@ function multiplicarArgumentos() {
 if(arguments.length===1)
 return arguments[0];
 
-var respuesta = arguments[0];
-for(var i = 1; i < arguments.length; i++ ){
-  respuesta = respuesta * arguments[i];
-} return respuesta;
+//var respuesta = arguments[0];
+//for(var i = 1; i < arguments.length; i++ ){
+ // respuesta = respuesta * arguments[i];
+//} return respuesta;
+
+ //opcion 2. empezar multiplicando por 1.
+ var total = 1;
+for (let i = 0; i< arguments.length; i++){
+  total = total * arguments[i]
+} return total
 }
 
 
@@ -162,10 +172,16 @@ function empiezaConNueve(n) {
   //Desarrolle una función que recibe como parámetro un número entero n. Debe retornar true si el entero 
   //inicia con 9 y false en otro caso.
   //Escribe tu código aquí
-  var numAString = n.toString();
-  if(numAString.charAt(0)==='9'){
-    return true;
-  } return false;
+  // opcion 1.  como arreglo
+  var ncadena = n.toString();
+  if (ncadena[0] === '9') return true;
+  return false
+
+  //opcion 2. chartAt
+//  var numAString = n.toString();
+ // if(numAString.charAt(0)==='9'){
+  //  return true;
+ // } return false;
 }
 
 
@@ -173,12 +189,20 @@ function todosIguales(arreglo) {
   //Escriba la función todosIguales, que indique si todos los elementos de un arreglo son iguales:
   //retornar true, caso contrario retornar false.
   //Escribe tu código aquí  
-  for(i=0; i<arreglo.length - 1;i++ ){
-    if(arreglo[i] !== arreglo[i+1]){
-      return false;
-    }
-  }return true;
-} 
+
+  for(let i = 1; i < arreglo.length ; i++){
+    if(arreglo[i] !== arreglo[i-1]) return false;
+  }
+  return true;
+  }
+
+
+ // for(i=0; i<arreglo.length - 1;i++ ){
+  //  if(arreglo[i] !== arreglo[i+1]){
+  //    return false;
+  //  }
+ // }return true;
+//} 
 
 
 function mesesDelAño(array) {
