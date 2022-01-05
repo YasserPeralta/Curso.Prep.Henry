@@ -69,11 +69,14 @@ function tieneEmail(usuario) {
   // Devuelve "true" si el usuario tiene un valor definido para la propiedad "email"
   // De lo contratio, devuelve "false"
   // Tu código:
- if(usuario.email != undefined){
-   return true;
- }else{
-   return false;
- }
+ //if(usuario.email != undefined){
+ //  return true;
+// }else{
+ //  return false;
+ //}
+ //opcion 2. mas simple
+ if(usuario.email) return true;
+ return false;
 }
 
 
